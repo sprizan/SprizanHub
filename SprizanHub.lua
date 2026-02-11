@@ -157,6 +157,10 @@ createButton("Paintball Spammer", "https://api.luarmor.net/files/v4/loaders/6639
 createButton("TP And Block", "https://raw.githubusercontent.com/Tokinu/TP-BLOCK/main/GOATED")
 createButton("Auto Duell", "https://pastefy.app/owJIETY3/raw")
 createButton("Allow Friends", "https://pastefy.app/oYbSASyd/raw")
+createButton("Instant Steal", "https://api.luarmor.net/files/v4/loaders/aadf0ff8561cd55df2e9557803c5f5ef.lua")
+createButton("Base Protector", "https://raw.githubusercontent.com/Tokinu/Base-Protector/refs/heads/main/Admin-Panel")
+createButton("Semi Instant Steal", "https://raw.githubusercontent.com/Solaratfr/SemiInstaSteal/refs/heads/main/Artfull")
+createButton("Lagger", "https://api.getpolsec.com/scripts/hosted/3e2a772b58ebd7ed4835f8a468f9fd2fbe9b589452b75d692a172ae673bf291a.lua")
 
 --// SH TOGGLE BUTTON
 local open = Instance.new("TextButton", gui)
