@@ -128,7 +128,6 @@ layout.CellPadding = UDim2.new(0,12,0,12)
 layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 layout.VerticalAlignment = Enum.VerticalAlignment.Top
 
-local function createButton(name, url)
 
 -- BUTTON CREATOR FUNCTION
 local function createButton(name, url)
