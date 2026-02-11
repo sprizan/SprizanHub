@@ -128,57 +128,7 @@ layout.CellPadding = UDim2.new(0,12,0,12)
 layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 layout.VerticalAlignment = Enum.VerticalAlignment.Top
 
---// GLOW BUTTON CREATOR
-local function createButton(name)
-
-	local button = Instance.new("TextButton", container)
-	button.Text = name
-	button.Font = Enum.Font.GothamBold
-	button.TextScaled = true
-	button.TextColor3 = Color3.new(1,1,1)
-	button.BackgroundColor3 = Color3.fromRGB(25,15,35)
-	Instance.new("UICorner", button).CornerRadius = UDim.new(0,14)
-
-	-- Glow stroke
-	local glow = Instance.new("UIStroke", button)
-	glow.Thickness = 1.5
-	glow.Color = Color3.fromRGB(170,0,255)
-
-	-- Pulsing animation
-	task.spawn(function()
-		while button.Parent do
-			TweenService:Create(glow, TweenInfo.new(1.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-				Transparency = 0.2
-			}):Play()
-			task.wait(1.5)
-			TweenService:Create(glow, TweenInfo.new(1.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-				Transparency = 0.6
-			}):Play()
-			task.wait(1.5)
-		end
-	end)
-
-	-- Hover Effect
-	button.MouseEnter:Connect(function()
-		TweenService:Create(button, TweenInfo.new(0.2), {
-			BackgroundColor3 = Color3.fromRGB(45,20,70)
-		}):Play()
-	end)
-
-	button.MouseLeave:Connect(function()
-		TweenService:Create(button, TweenInfo.new(0.2), {
-			BackgroundColor3 = Color3.fromRGB(25,15,35)
-		}):Play()
-	end)
-
-	-- Click Bounce
-	button.MouseButton1Down:Connect(function()
-		TweenService:Create(button, TweenInfo.new(0.1), {
-			Size = button.Size - UDim2.new(0,4,0,4)
-		}):Play()
-	end)
-
-
+local function createButton(name, url)
 
 -- BUTTON CREATOR FUNCTION
 local function createButton(name, url)
